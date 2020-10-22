@@ -11,7 +11,7 @@ Summary:        A simple wrapper around optparse for powerful command line utili
 
 License:        BSD
 URL:            http://github.com/mitsuhiko/click
-Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{tarname}-%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
  
 BuildRequires:  pkgconfig(python3)
@@ -44,7 +44,7 @@ comes with good defaults out of the box.
 
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%setup -q -n %{pypi_name}-%{version}
 
 %if %{with_python2}
 rm -rf %{py2dir}
