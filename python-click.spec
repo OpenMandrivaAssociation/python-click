@@ -5,8 +5,8 @@
 %define _duplicate_files_terminate_build 0
 
 Name:           python-%{pypi_name}
-Version:        7.0
-Release:        2
+Version:        7.1.2
+Release:        1
 Summary:        A simple wrapper around optparse for powerful command line utilities
 
 License:        BSD
