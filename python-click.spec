@@ -80,13 +80,13 @@ popd
 #export LC_ALL=en_GB.utf8.
 #PYTHONPATH=$(pwd) py.test tests --tb=long --verbose 
 
-%%if %{with_python2}
-pushd %{py2dir}
-export LANG=en_GB.utf8 
-export LC_ALL=en_GB.utf8 
-PYTHONPATH=$(pwd) py.test tests --tb=long --verbose 
-popd
-%%endif
+#%%if %{with_python2}
+#pushd %{py2dir}
+#export LANG=en_GB.utf8 
+#export LC_ALL=en_GB.utf8 
+#PYTHONPATH=$(pwd) py.test tests --tb=long --verbose 
+#popd
+#%%endif
 
 %files
 %doc README.rst CHANGES.rst CONTRIBUTING.rst LICENSE.rst
