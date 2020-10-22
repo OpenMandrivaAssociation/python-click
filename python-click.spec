@@ -89,12 +89,12 @@ popd
 #%%endif
 
 %files
-%doc README.rst CHANGES.rst CONTRIBUTING.rst LICENSE.rst
+%doc README.rst CHANGES.rst LICENSE.rst
 %{python_sitelib}/%{pypi_name}
 %{python_sitelib}/%{tarname}-%{version}-py?.?.egg-info
 %%if %{with_python2}
 %files -n python2-%{pypi_name}
-%doc README.rst CHANGES.rst CONTRIBUTING.rst LICENSE.rst
+%doc README.rst CHANGES.rst LICENSE.rst
 %{python2_sitelib}/%{pypi_name}
 %{python2_sitelib}/%{tarname}-%{version}-py?.?.egg-info
 %endif # with_python2
