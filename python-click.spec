@@ -3,8 +3,8 @@
 %define _duplicate_files_terminate_build 0
 
 Name:           python-%{pypi_name}
-Version:        8.1.3
-Release:        2
+Version:        8.1.7
+Release:        1
 Summary:        A simple wrapper around optparse for powerful command line utilities
 
 License:        BSD
