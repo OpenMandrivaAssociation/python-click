@@ -8,7 +8,7 @@ Release:        2
 Summary:        A simple wrapper around optparse for powerful command line utilities
 
 License:        BSD
-URL:            http://github.com/mitsuhiko/click
+URL:            https://github.com/mitsuhiko/click
 Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
  
