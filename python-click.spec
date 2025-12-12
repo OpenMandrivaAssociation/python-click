@@ -4,7 +4,7 @@
 
 Name:           python-%{pypi_name}
 Version:        8.1.7
-Release:        2
+Release:        3
 Summary:        A simple wrapper around optparse for powerful command line utilities
 
 License:        BSD
