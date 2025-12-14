@@ -24,6 +24,6 @@ It's the "Command Line Interface Creation Kit".  It's highly configurable but
 comes with good defaults out of the box.
 
 %files
-%doc README.rst CHANGES.rst LICENSE.rst
+%doc CHANGES.rst
 %{python_sitelib}/%{pypi_name}
-%{python_sitelib}/click-%{version}-py*.egg-info*
+
