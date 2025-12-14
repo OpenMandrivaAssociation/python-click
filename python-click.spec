@@ -26,4 +26,4 @@ comes with good defaults out of the box.
 %files
 %doc CHANGES.rst
 %{python_sitelib}/%{pypi_name}
-
+%{python_sitelib}/%{pypi_name}-%{version}.dist-info
