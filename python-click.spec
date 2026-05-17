@@ -2,7 +2,7 @@
 %bcond tests 1
 
 Name:		python-click
-Version:	8.3.3
+Version:	8.4.0
 Release:	1
 Summary:	A simple wrapper around optparse for powerful command line utilities
 Group:		Development/Python
