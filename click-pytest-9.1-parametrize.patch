@@ -1,0 +1,42 @@
+From 30749b45c50f4811a3487fc9d11da2b7afc6007f Mon Sep 17 00:00:00 2001
+From: Colin Watson <cjwatson@debian.org>
+Date: Wed, 1 Jul 2026 10:16:42 +0100
+Subject: [PATCH] Don't parameterize tests using non-Collection iterables
+
+Backport of https://github.com/pallets/click/pull/3656 (queued for
+Click 8.5.0). pytest 9.1 treats non-Collection iterables passed to
+parametrize as an error when filterwarnings=error.
+
+---
+ tests/test_basic.py | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+diff --git a/tests/test_basic.py b/tests/test_basic.py
+index 34d22e792..733d8ca5c 100644
+--- a/tests/test_basic.py
++++ b/tests/test_basic.py
+@@ -2,7 +2,6 @@
+ 
+ import enum
+ import os
+-from itertools import chain
+ 
+ import pytest
+ 
+@@ -258,10 +257,10 @@ def cli(f):
+ 
+ @pytest.mark.parametrize(
+     ("value", "expect"),
+-    chain(
+-        ((x, "True") for x in ("1", "true", "t", "yes", "y", "on")),
+-        ((x, "False") for x in ("0", "false", "f", "no", "n", "off")),
+-    ),
++    [
++        *((x, "True") for x in ("1", "true", "t", "yes", "y", "on")),
++        *((x, "False") for x in ("0", "false", "f", "no", "n", "off")),
++    ],
+ )
+ def test_boolean_conversion(runner, value, expect):
+     @click.command()
+-- 
+2.49.0

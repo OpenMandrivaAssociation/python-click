@@ -6,9 +6,12 @@ Version:	8.4.2
 Release:	1
 Summary:	A simple wrapper around optparse for powerful command line utilities
 Group:		Development/Python
-License:	BSD
+License:	BSD-3-Clause
 URL:		https://github.com/pallets/click
 Source0:	%{URL}/archive/%{version}/%{name}-%{version}.tar.gz
+# Backport of pallets/click#3656 (8.5.0): pytest >= 9.1 rejects
+# non-Collection iterables in parametrize when filterwarnings=error.
+Patch0:		click-pytest-9.1-parametrize.patch
 
 BuildSystem:    python
 BuildArch:      noarch
@@ -36,6 +39,7 @@ pytest -rs --tb=short -k "$skiptests"
 %endif
 
 %files
-%doc CHANGES.rst
+%doc CHANGES.md README.md
+%license LICENSE.txt
 %{python_sitelib}/%{module}
 %{python_sitelib}/%{module}-%{version}.dist-info
